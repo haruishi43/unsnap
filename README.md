@@ -147,6 +147,21 @@ for s in bitwarden blix cecconoid chromium discord firefox flock-chat gimp kdenl
 done
 ```
 
+### Manually remove snaps
+
+Need to remove snaps manually for them to open up the `/dev/loop` mounts.
+Putting these in the script is a future TODO.
+
+``` {.bash}
+sudo snap remove --purge {snap-store,gtk-common-themes,gnome-3-34-1804,gnome-3-38-2004,core18,core20,bare,snapd}
+```
+
+Alternatives to `snap-store`:
+
+``` {.bash}
+sudo apt install gnome-software
+```
+
 ### 99-remove-snapd
 
 ``` {.bash}
